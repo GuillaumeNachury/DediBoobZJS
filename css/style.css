@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'JennaSue';
+    src: url(../assets/Painterz.ttf);
+}
+
+body{
+    background-image:url(../assets/tileBG.png);
+    background-repeat:repeat;
+}
+
+img{
+ display:none;
+}
+
+#holder{
+    text-align:center;
+    padding-top:50px;
+}
+
+#dedi{
+    width:800px;
+    margin-bottom: 20px;
+}
+
