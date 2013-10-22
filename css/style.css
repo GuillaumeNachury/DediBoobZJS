@@ -8,7 +8,7 @@ body{
     background-repeat:repeat;
 }
 
-img{
+.hidden{
  display:none;
 }
 
@@ -22,3 +22,6 @@ img{
     margin-bottom: 20px;
 }
 
+.vignette{
+    -webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.6);
+}

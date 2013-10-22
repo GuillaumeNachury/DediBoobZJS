@@ -75,8 +75,8 @@ COQUINOU !!!!!!!!!!!!!!!!!!!!!!!
 
 */
 
-var cvs;// = _("#playground");
-var ctx;// = cvs.getContext("2d");
+var cvs = _("#playground");
+var ctx = cvs.getContext("2d");
 
 var srcImg = _("#src");
 var srcMap = _("#map");
@@ -99,18 +99,11 @@ var Cfg = function() {
         this.fontSize = 40;
 };
 
-var image = new Image();
-
 function init(){
    setupGUI()
-    cvs = document.createElement('canvas');
 	cvs.width = srcImg.naturalWidth;
 	cvs.height = srcImg.naturalHeight;
-	ctx = cvs.getContext("2d");
-    _("#holder").appendChild(cvs);
-     //_("#holder").appendChild(image);
-    
-    
+	
     _("#dedi").addEventListener("keyup", update);
     update();
 }
@@ -189,15 +182,10 @@ function render(){
     //ctx.globalCompositeOperation = 'luminosity';
     ctx.globalAlpha = 0.3;
     ctx.drawImage(textLayer, 0,0, srcMap.width, srcMap.height);
-    //createFinalImage();
     
 }
 
 function createFinalImage(){
-    
-	image.src = cvs.toDataURL("image/png");
-  image.className = "vignette";
-   
 }
 
 window.onload = init;
